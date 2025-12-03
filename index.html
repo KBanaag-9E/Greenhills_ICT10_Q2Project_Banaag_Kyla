@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Recommended meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        <!-- PyScript CSS -->
+        <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+        <!-- This script tag bootstraps PyScript -->
+        <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+        <!-- Bootstrap Setup -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- External CSS -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <title>ICT 10 Q2 Skills Test</title>
+
+    </head>
+    <body>
+
+        <py-script src="main.py"></py-script>
+
+        <div>
+            <nav class="navbar navbar-dark bg-success navbar-expand-sm">
+                <div class="container-fluid">
+
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav nav nav-tabs me-auto">
+                        <!-- <ul class="nav nav-item"> -->
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#grade">Grade Calculator</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#clubs">Clubs</a>
+                            </li>
+                        <!-- </ul> -->
+                    </ul>
+
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="text" placeholder="Search">
+                        <button class="btn btn" type="button" style="color: white;">Search</button>
+                    </form>
+                    
+                </div>
+                </div>
+            </nav>
+        </div>
+        
+        <div class="tab-content">
+
+            <!-- Home tab -->
+            <div class="tab-pane container active" id="home">
+                <div class="container-fluid mb-3 mt-3">
+                    <h1><b>Marikina Montessori Center</b></h1>
+                    <h2>Building Up Future Trailblazers</h2>
+                </div>
+
+                <div class="container">
+                    <h4>
+                        At <b>Marikina Montessori Center</b>, we believe every child is born with limitless potential. Our Montessori-inspired education nurtures curiosity, independence, and a lifelong love for learning—empowering young minds to become confident, compassionate, and innovative leaders of tomorrow.  
+                        <br> <br>
+                        With a nurturing environment, hands-on exploration, and individualized learning, we lay the foundation for <b>academic excellence, creativity, and character development</b>. Whether your child is taking their first steps or preparing for the future, we guide them to <b>blaze their own trail</b> with courage and purpose.
+                        <br> <br>
+                        Discover how we inspire tomorrow’s trailblazers—one child at a time.
+                        <br>
+                    </h4>
+
+                    <input type="button" class="mb-2 btn btn-success" style="color: white;" value="Read More">
+                </div>
+            </div>
+
+            <!-- Grade Calculator tab -->
+            <div class="tab-pane container fade mt-3" id="grade">
+                <div class="container">
+                <h1 class="mt-2"><b>Student Grade Calculator</b></h1>
+                    <h4 class="mb-4">Please input all your final individual subject grade percent scores to get your final weighted average score.</h4>
+
+                        <form id="grade_calculator">
+
+                            <!-- full name -->
+                            <div class="mb-3">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName">
+                            </div>
+                            <div class="mb-3">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName">
+                            </div>
+
+                            <!-- science (subject 1) -->
+                            <div class="mb-3">
+                                <label for="s1" class="form-label">Science</label>
+                                <input type="text" class="form-control" id="s1">
+                            </div>
+                            <!-- english (subject 2) -->
+                            <div class="mb-3">
+                                <label for="s2" class="form-label">English</label>
+                                <input type="text" class="form-control" id="s2">
+                            </div>
+                            <!-- filipino (subject 3) -->
+                            <div class="mb-3">
+                                <label for="s3" class="form-label">Filipino</label>
+                                <input type="text" class="form-control" id="s3">
+                            </div>
+                            <!-- math (subject 4) -->
+                            <div class="mb-3">
+                                <label for="s4" class="form-label">Mathematics</label>
+                                <input type="text" class="form-control" id="s4">
+                            </div>
+                            <!-- ss/philosophy (subject 5) -->
+                            <div class="mb-3">
+                                <label for="s5" class="form-label">Philisophy</label>
+                                <input type="text" class="form-control" id="s5">
+                            </div>
+                            <!-- TLE (subject 6) -->
+                            <div class="mb-3">
+                                <label for="s6" class="form-label">TLE</label>
+                                <input type="text" class="form-control" id="s6">
+                            </div>
+
+                            <input type="button" class="mb-2 btn btn-success" style="color: white;" py-click="grade_calculator" value="Calculate">
+
+                            <div id="output"></div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Club Info tab -->
+            <div class="tab-pane container fade mt-3" id="clubs">
+                <div class="container">
+                    <h1><b>Our Clubs</b></h1>
+
+                    <form>
+                        <div class="row justify-content-center mb-3">
+                            <select id="selected-club" class="col-sm-5 text-center">
+                                <option value="Math Club">Math Club</option>
+                                <option value="Science Club">Science Club</option>
+                                <option value="Robotics Club">Robotics Club</option>
+                                <option value="Writing Club">Writing Club</option>
+                                <option value="Art Club">Art Club</option>
+                                <option value="Theater Club">Theater Club</option>
+                            </select>
+                        </div>
+
+                        <div class="text-center">
+                            <input type="button" class="btn btn-success mb-3" py-click="any_club" value="Show Info on Robotics Club">
+                        </div>
+                    </form>
+
+                    <div id="ClubInfo" class="mb-4"></div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <h5><a href="https://kbanaag-9e.github.io/Q2EX2-Kyla-Banaag/" target="_blank">Kyla Limuelle Banaag | 9-E</a></h5>
+            </div>
+
+        </div>
+
+        <!-- References: -->
+         <!-- https://www.w3schools.com/bootstrap/bootstrap_tabs_pills.asp -->
+         <!-- https://www.w3schools.com/bootstrap/bootstrap_navbar.asp -->
+         <!-- https://getbootstrap.com/docs/5.0/components/navs-tabs/ -->
+
+    </body>

@@ -1,0 +1,40 @@
+body {
+    background-color: #C9E4CA;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.container {
+    background-color: #6bc99b;
+    border-radius: 20px;
+}
+
+.container-fluid {
+    background-color: #3eab76;
+    border-radius: 20px;
+}
+
+img {
+    width: 20vw;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.nav-tabs .nav-link.active {
+    color: #000000;
+}
+
+.footer {
+	text-align: center;
+}
+
+.footer a {
+	color: #000000;
+    text-decoration: none;
+}
