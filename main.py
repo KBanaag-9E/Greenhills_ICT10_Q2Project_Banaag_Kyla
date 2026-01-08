@@ -27,14 +27,6 @@ def grade_calculator(e):
     display(f'Philosophy: {ss}', target='output')
     display(f'TLE: {tle}', target='output')
 
-    # assigns the default value of the subject input as 0 if no input is detected
-    sci = int(("") or 0)
-    eng = int(("") or 0)
-    fil = int(("") or 0)
-    math = int(("") or 0)
-    ss = int(("") or 0)
-    tle = int(("") or 0)
-
     subjects = [sci, eng, fil, math, ss, tle] # all subjecrs
     units = (5, 3, 2) # number of hours per subject
 
@@ -107,4 +99,5 @@ def any_club(e):
     display(f"Meeting Time: {club_info[club_name]['Meeting_Time']}", target='ClubInfo')
     display(f"Location: {club_info[club_name]['Location']}", target='ClubInfo')
     display(f"Club Moderator: {club_info[club_name]['Moderator']}", target='ClubInfo')
+
     display(f"Number of Members: {club_info[club_name]['Number_of_Members']}", target='ClubInfo')
